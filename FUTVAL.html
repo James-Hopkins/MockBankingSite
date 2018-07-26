@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.1//EN" 
+"http://www.w3.org/tr/xhtml11/Dtd/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Home page</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="jscript/fvom.js"></script>
+		<img id ="abi" src = "images/abi.jpg"/>
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href ="index.html">Home</a></li>
+				<li id = "current"><a href ="FUTVAL.html" title="Looking to see how much your savings will be worth in a few years click here.">Future value</a></li>
+				<li><a href ="MORTGAGE.html" title="First time home owner? Check out our Mortgage payment schedule creator.">Mortgage Payments</a></li>
+				<li><a href ="ANNUITIES.html" title = "Setting up a nest egg for retirement? Why not get a heads up on how it will grow click here.">Annuities</a></li>
+			</ul>
+		</header>	
+		<table>
+		<tr>
+			<td><input type = "radio" name = "Money" id = "FutVal" onclick = "fvom:CheckSelection(1)" title="This is what the money invested will be worth at the end of the time period." checked>Future Value </input></td>
+			<td><input type = "radio" name = "Money" id = "PreVal" onclick = "fvom:CheckSelection(2)" title="This is the amount of your savings before interest.">Present Value</input></td>
+			<td><input type = "radio" name = "Money" id = "Rate" onclick = "fvom:CheckSelection(3)" title="The annual interest rate is entered here.">Rate of Interest</input></td>
+			<td><input type = "radio" name = "Money" id = "NoYears" onclick = "fvom:CheckSelection(4)" title="The amount of time you wish to leave your investment in the bank, measured in years.">Years</input></td>
+		</tr>
+		</table>
+		</br>
+		<table>
+			<tr>
+				<td title="This is what the money invested will be worth at the end of the time period.">Future Value</td><td><input type = "text" id="FV" value=""></input></td>
+			</tr>
+			<tr>
+				<td title="This is the amount of your savings before interest.">Present Value</td><td><input type = "text" id="PV" value="1500"></input></td>
+			</tr>
+			<tr>
+				<td title="The annual interest rate is entered here.">Interest Rate</td><td><input type = "text" id="ROF" value="4.5"></input></td>
+			</tr>
+			<tr>
+				<td title="The amount of time you wish to leave your investment in the bank, measured in years.">Years</td><td><input type = "text" id="Year" value="1"></input></td>
+			</tr>
+			<tr>
+				<td>Compounded</td><td><select id = "compounded"> 
+				<option value = "year">Yearly</option>
+				<option value = "quarter">quarterly</option>
+				<option value = "month">monthly</option>
+				</select></td>
+			</tr>
+		</table>
+		</br>
+		<table>
+			<tr>
+				<td><input type = "button" id="reset" value= "RESET"></input></td>
+				<td><input type = "button" id="calculate" value= "CALCULATE"></input></td>
+			</tr>
+		</table>
+		<hr>
+		<p id="resultPara">
+		</p>
+		<hr><br>
+		
+	</body>
+</html>

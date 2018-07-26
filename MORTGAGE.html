@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.1//EN" 
+"http://www.w3.org/tr/xhtml11/Dtd/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Mortgage</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<img id ="abi" src = "images/abi.jpg"/>
+		<script type="text/javascript" src="jscript/Mortgage.js"></script>
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href ="index.html">Home</a></li>
+				<li><a href ="FUTVAL.html" title="Looking to see how much your savings will be worth in a few years click here">Future value</a></li>
+				<li id = "current"><a href ="MORTGAGE.html" title="First time home owner? Check out our Mortgage payment schedule creator">Mortgage Payments</a></li>
+				<li><a href ="ANNUITIES.html" title = "Setting up a nest egg for retirement? Why not get a heads up on how it will grow click here">Annuities</a></li>
+			</ul>
+		</header>
+		<table>
+			<tr>
+				<td colspan="2">
+					<input type="radio" id="Dept" name="Money" checked onClick="Mortgage:CheckSelection(1)" title="This is the amount you wish to borrow from the bank"/>Mortgage Amount
+					<input type="radio" id="Repay" name="Money" onClick="Mortgage:CheckSelection(2)" title="These are the payments that must be made to the bank each month."/>Monthly Repayments
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<table>
+			<tr>
+				<td title="This is the amount you wish to borrow from the bank">Mortgage Amount</td>
+				<td><input type="text" id="P" disabled/></td>
+			</tr>
+			<tr>
+				<td title="These are the payments that must be made to the bank each month.">Monthly Repayments</td>
+				<td><input type="text" id="M" value = "705" /></td>
+			</tr>
+			<tr>
+				<td title="The annual interest rate is entered here.">Interest Rate </td>
+				<td><input type="text" id="R" value = "3.75"/></td>
+			</tr>
+			<tr>
+				<td title="This is how long you wish to take out your loan longer measured in years.">Years</td>
+				<td><input type="text" id="N" value = "25"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" id="reset" value="RESET"/></td>
+				<td><input type="button" id="calculate" value="Calculate"/></td>
+			</tr>
+		</table>
+		<br/>
+		<hr/>
+		<br/>
+		<div id="results">
+		
+		</div>
+	</body>
+</html>

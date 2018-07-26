@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background-color: #440021;
+}
+body{
+	text-align: center;
+	background-color: white;
+	width: 610px;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+table{
+	margin: 0 auto;
+}
+header {
+	margin: 0 auto;
+	text-align: center;
+}
+header ul {
+	list-style: none;
+	padding: 1em 0;
+	background-color: #440021;
+}
+header li { display: inline;}
+header a {
+	padding: 1em 2em;
+	font-weight: bold;
+	color: white;
+}
+header a.current{color: yellow; }
+footer{ text-align: center;}
+td{
+text-align: left;
+}
+
+
