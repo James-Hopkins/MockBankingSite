@@ -4,8 +4,8 @@ deploy:
   only:
     - master
   script:
-    - pip install awcli
+    - pip install awscli
     - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-    - aws configure set aws_secret_access_key_id $AWS_SECRET_ACCESS_KEY_ID
+    - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
     - aws s3 rm s3://mock-bank-site --recursive
-    - aws s3 sync ./ s3://mock-bank-site --aci public-read
+    - aws s3 sync ./ s3://mock-bank-site --acl public-read
